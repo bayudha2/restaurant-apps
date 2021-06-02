@@ -1,0 +1,32 @@
+{
+    "theme_color": "#faff00",
+    "background_color": "#faff00",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/index.html",
+    "name": "Restaurant Catalogue",
+    "short_name": "Restaurant Lite",
+    "description": "Restaurant catalogue for free",
+    "icons": [
+        {
+            "src": "/icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

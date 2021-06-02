@@ -1,0 +1,436 @@
+$second-color: #393a03;
+$third-color: #8d8d8d;
+$base-color: #faff00;
+
+@mixin perloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  section {
+    .loading__image {
+      @include perloader();
+    }
+    article.restaurant {
+      margin: 10px 15%;
+      .restaurant__hero {
+        .restaurant__header {
+          margin-top: 100px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+
+          .header__content {
+            h1 {
+              font-weight: 600;
+              color: $second-color;
+              font-size: 26px;
+            }
+            .detail__rating {
+              color: #c4c4c4;
+              font-weight: 400;
+            }
+            p {
+              padding-right: 120px;
+              margin-top: 20px;
+              color: $third-color;
+              font-size: 16px;
+              line-height: 1.5;
+              font-weight: lighter;
+            }
+
+            button {
+              font-size: 14px;
+              color: $second-color;
+              font-weight: 500;
+              padding: 15px 24px;
+              background-color: $base-color;
+              border-radius: 10px;
+              border: none;
+              margin-top: 30px;
+              transition: all 0.3s;
+              text-decoration: none;
+              cursor: pointer;
+              box-shadow: 9px 11px 15px rgba(#000000, 0.09);
+
+              &:hover {
+                transform: scale(1.1);
+              }
+
+              &:active {
+                transform: scale(0.9);
+              }
+            }
+
+            .info__content {
+              margin-top: 40px;
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+
+              .info__address,
+              .info__category {
+                img {
+                  width: 30px;
+                  height: 30px;
+                }
+
+                h6 {
+                  margin-top: 10px;
+                  font-size: 16px;
+                  font-weight: 300;
+                }
+              }
+            }
+          }
+
+          .hero__banner {
+            .image__banner {
+              padding-left: 50px;
+
+              .picture__banner {
+                border-radius: 15px 15px 15px 100px;
+                width: 500px;
+                height: 400px;
+                position: absolute;
+                z-index: 1;
+                object-fit: cover;
+                margin: 44px 44px 0 0;
+              }
+              .frame__banner {
+                width: 500px;
+                height: 400px;
+                position: absolute;
+                border-radius: 15px 15px 15px 100px;
+                margin: 0 0 44px 44px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    article.specialDish,
+    article.specialDrink {
+      margin: 120px 15% 0 15%;
+
+      .specialDish__title,
+      .specialDrink__title {
+        .horizontal__scroll {
+          display: flex;
+          justify-content: center;
+
+          img {
+            width: 32px;
+            height: 32px;
+          }
+        }
+        .specialDish__head,
+        .specialDrink__head {
+          text-align: center;
+
+          h1 {
+            font-weight: 600;
+            font-size: 22px;
+            color: $second-color;
+          }
+          p {
+            margin-top: 5px;
+            font-weight: lighter;
+            font-size: 14px;
+            color: $third-color;
+          }
+        }
+
+        .dish__list,
+        .drink__list {
+          margin-top: 70px;
+          display: flex;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+
+          .dish__card,
+          .drink__card {
+            flex: 0 0 auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            height: 400px;
+            width: 320px;
+            transition: 0.3s;
+            margin: 20px 50px 20px 0;
+
+            .image__dish,
+            .image__drink {
+              display: flex;
+              justify-content: center;
+              img {
+                margin-top: 40px;
+                border-radius: 50%;
+              }
+            }
+            .dish__content,
+            .drink__content {
+              margin-top: 38px;
+              text-align: center;
+              h2 {
+                font-size: 20px;
+                color: $second-color;
+                font-weight: 500;
+              }
+            }
+
+            &:hover {
+              box-shadow: 0 11px 15px rgba(#000000, 0.1);
+            }
+          }
+        }
+      }
+    }
+
+    article.customer__riview {
+      margin-top: 120px;
+      background-color: #fefad6;
+      padding: 40px 0;
+
+      .container {
+        margin: 0 15% 0 15%;
+
+        h1 {
+          font-size: 22px;
+          color: $second-color;
+        }
+
+        .review__card {
+          display: flex;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+
+          .card {
+            position: relative;
+            background-color: #ffffff;
+            border-radius: 10px;
+            height: 320px;
+            width: 280px;
+            flex: 0 0 auto;
+            margin: 20px 50px 20px 0;
+            padding: 20px;
+
+            p {
+              font-size: 16px;
+              line-height: 1.4;
+              font-weight: lighter;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 6; /* number of lines to show */
+              -webkit-box-orient: vertical;
+            }
+
+            .reviewer__nameDate {
+              position: absolute;
+              bottom: 20px;
+              .reviewer__name {
+                font-weight: 500;
+              }
+            }
+          }
+        }
+
+        .personal__review {
+          margin-top: 40px;
+          h2 {
+            text-align: center;
+            font-size: 22px;
+            color: $second-color;
+          }
+
+          .review__container {
+            margin-top: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .review__form {
+              #name,
+              #review {
+                width: 190px;
+                height: 40px;
+                border: none;
+                padding: 10px;
+              }
+              #review {
+                width: 400px;
+              }
+            }
+            #review__submit {
+              cursor: pointer;
+              margin: 0 5px;
+              font-size: 14px;
+              color: white;
+              font-weight: 500;
+              padding: 8px 10px;
+              background-color: $second-color;
+              border-radius: 10px;
+              border: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// responsive
+
+@media screen and (max-width: 1200px) {
+  main {
+    section {
+      article.restaurant {
+        .restaurant__hero {
+          .restaurant__header {
+            grid-template-columns: 1fr;
+
+            .hero__banner {
+              margin-top: 70px;
+
+              .image__banner {
+                padding-left: 0;
+
+                .picture__banner {
+                  border-radius: 15px 15px 15px 15px;
+                  max-width: 100%;
+                  max-height: auto;
+                  position: relative;
+                  object-fit: cover;
+                  margin: 0;
+                }
+                .frame__banner {
+                  width: 0px;
+                  height: 0px;
+                  position: relative;
+                  border-radius: 15px 15px 15px 100px;
+                  margin: 0 0 44px 44px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    section {
+      article.specialDish,
+      article.specialDrink {
+        .specialDish__title,
+        .specialDrink__title {
+          .dish__list,
+          .drink__list {
+            .dish__card,
+            .drink__card {
+              height: 350px;
+              width: 270px;
+
+              .image__dish,
+              .image__drink {
+                img {
+                  width: 75%;
+                  height: 75%;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      article.customer__riview {
+        .container {
+          .personal__review {
+            .review__container {
+              .review__form {
+                #name,
+                #review {
+                  width: 120px;
+                }
+                #review {
+                  width: 270px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    section {
+      article.restaurant {
+        .restaurant__hero {
+          .restaurant__header {
+            .header__content {
+              p {
+                padding-right: 0;
+              }
+            }
+          }
+        }
+      }
+
+      article.specialDish,
+      article.specialDrink {
+        .specialDish__title,
+        .specialDrink__title {
+          .dish__list,
+          .drink__list {
+            .dish__card,
+            .drink__card {
+              height: 320px;
+              width: 240px;
+
+              .image__dish,
+              .image__drink {
+                img {
+                  width: 65%;
+                  height: 65%;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      article.customer__riview {
+        .container {
+          .personal__review {
+            .review__container {
+              .review__form {
+                #name,
+                #review {
+                  width: 40px;
+                }
+                #review {
+                  width: 75px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
