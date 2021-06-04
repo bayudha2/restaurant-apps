@@ -57,13 +57,12 @@ main {
               color: #797979;
             }
             .item__title {
-              font-size: 14px;
-              padding: 8px 0;
-              font-weight: bold;
-
               a {
+                font-weight: bold;
                 color: $second-color;
                 text-decoration: none;
+                font-size: 24px;
+                padding: 8px 0;
               }
             }
             .item__desc {
