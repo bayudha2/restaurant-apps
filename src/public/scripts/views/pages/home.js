@@ -1,7 +1,7 @@
 import RestaurantDbSource from '../../data/restaurantdb-source';
 import { restaurantItemTemplate } from '../template/template-creator';
-import PulseLoading from '../../../public/images/pulse_loading.svg';
-import NoDataIllu from '../../../public/images/no-data.svg';
+import PulseLoading from '../../../images/pulse_loading.svg';
+import NoDataIllu from '../../../images/no-data.svg';
 
 const Home = {
   async render() {

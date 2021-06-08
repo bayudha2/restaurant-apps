@@ -4,7 +4,7 @@ const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  entry: path.resolve(__dirname, 'src/index.js'),
+  entry: path.resolve(__dirname, 'src/public/index.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -38,7 +38,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/templates/index.html'),
+      template: path.resolve(__dirname, 'src/public/templates/index.html'),
       filename: 'index.html',
     }),
     new CopyWebpackPlugin({
@@ -50,7 +50,7 @@ module.exports = {
       ],
     }),
     new ServiceWorkerWebpackPlugin({
-      entry: path.resolve(__dirname, 'src/scripts/sw.js'),
+      entry: path.resolve(__dirname, 'src/public/scripts/sw.js'),
     }),
   ],
 };

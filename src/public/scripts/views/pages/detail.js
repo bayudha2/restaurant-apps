@@ -2,9 +2,9 @@
 import LikeButtonInitiator from '../../utils/like-button';
 import RestaurantDbSource from '../../data/restaurantdb-source';
 import UrlParser from '../../routes/url-parser';
-import HorizonScroll from '../../../public/images/heros/scroll.svg';
-import PulseLoading from '../../../public/images/pulse_loading.svg';
-import NoDataIllu from '../../../public/images/no-data.svg';
+import HorizonScroll from '../../../images/heros/scroll.svg';
+import PulseLoading from '../../../images/pulse_loading.svg';
+import NoDataIllu from '../../../images/no-data.svg';
 import {
   restaurantDetailTemplate,
   specialDishTemplate,

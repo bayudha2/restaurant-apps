@@ -1,6 +1,6 @@
 import FavoriteRestaurantIdb from '../../data/favoriterestaurant-idb';
 import { likedRestaurantTemplate } from '../template/template-creator';
-import NoDataIllu from '../../../public/images/no-data.svg';
+import NoDataIllu from '../../../images/no-data.svg';
 
 const Favorite = {
   async render() {

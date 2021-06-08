@@ -16,7 +16,7 @@ if (workbox) {
     { url: '/images/heros/scroll.svg', revision: '1' },
     { url: '/images/heros/soft-drink.svg', revision: '1' },
     { url: '/images/heros/spoon_fork.svg', revision: '1' },
-    { url: '/styles/detailResto.scss', revision: '1' },
+    { url: '/scripts/data/favoriterestaurant-idb.js', revision: '1' },
     { url: '/manifest.json', revision: '1' },
   ]);
 } else {

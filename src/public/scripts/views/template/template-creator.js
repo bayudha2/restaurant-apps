@@ -1,9 +1,9 @@
 import CONFIG from '../../globals/config';
-import Pin from '../../../public/images/heros/pin.svg';
-import SpoonFork from '../../../public/images/heros/spoon_fork.svg';
-import Frame from '../../../public/images/heros/hero_frame.jpeg';
-import FoodLogo from '../../../public/images/heros/food_logo.svg';
-import DrinkLogo from '../../../public/images/heros/drink_logo.svg';
+import Pin from '../../../images/heros/pin.svg';
+import SpoonFork from '../../../images/heros/spoon_fork.svg';
+import Frame from '../../../images/heros/hero_frame.jpeg';
+import FoodLogo from '../../../images/heros/food_logo.svg';
+import DrinkLogo from '../../../images/heros/drink_logo.svg';
 
 const restaurantItemTemplate = (restaurant) => `
 <div class="card__item">
