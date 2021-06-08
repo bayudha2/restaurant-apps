@@ -1,20 +1,24 @@
-import 'regenerator-runtime';
-import CacheHelper from './utils/cache-helper';
+importScripts(
+  'https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js'
+);
+if (workbox) {
+  console.log(`Yay! Workbox is loaded 🎉`);
 
-const { assets } = global.serviceWorkerOption;
-
-self.addEventListener('install', (event) => {
-  console.log('Installing Service Worker ...');
-
-  event.waitUntil(CacheHelper.cachingAppShell([...assets, './']));
-});
-
-self.addEventListener('activate', (event) => {
-  console.log('Activating Service Worker ...');
-
-  event.waitUntil(CacheHelper.deleteOldCache());
-});
-
-self.addEventListener('fetch', (event) => {
-  event.respondWith(CacheHelper.revalidateCache(event.request));
-});
+  workbox.precaching.precacheAndRoute([
+    { url: '/', revision: '1' },
+    { url: '/images/heros/drink_logo.svg', revision: '1' },
+    { url: '/images/heros/food_logo.svg', revision: '1' },
+    { url: '/images/heros/food.svg', revision: '1' },
+    { url: '/images/heros/hero_frame.jpeg', revision: '1' },
+    { url: '/images/heros/hero_frame.svg', revision: '1' },
+    { url: '/images/heros/hero-image_4.jpg', revision: '1' },
+    { url: '/images/heros/pin.svg', revision: '1' },
+    { url: '/images/heros/scroll.svg', revision: '1' },
+    { url: '/images/heros/soft-drink.svg', revision: '1' },
+    { url: '/images/heros/spoon_fork.svg', revision: '1' },
+    { url: '/styles/detailResto.scss', revision: '1' },
+    { url: '/manifest.json', revision: '1' },
+  ]);
+} else {
+  console.log(`Boo! Workbox didn't load 😬`);
+}

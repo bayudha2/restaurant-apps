@@ -2,7 +2,7 @@
     "theme_color": "#faff00",
     "background_color": "#faff00",
     "display": "standalone",
-    "scope": "/",
+    "scope": "../",
     "start_url": "/index.html",
     "name": "Restaurant Catalogue",
     "short_name": "Restaurant Lite",
