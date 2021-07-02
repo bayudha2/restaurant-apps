@@ -52,6 +52,8 @@ if (workbox) {
       revision: '1',
     },
     { url: '/container.bundle.js', revision: '1' },
+    { url: '/0.container.bundle.js', revision: '1' },
+    { url: '/1.container.bundle.js', revision: '1' },
     { url: '/manifest.json', revision: '1' },
   ]);
 
