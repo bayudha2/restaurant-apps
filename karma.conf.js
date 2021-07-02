@@ -2,7 +2,6 @@
 // Generated on Fri Jul 03 2020 20:15:52 GMT+0700 (Western Indonesia Time)
 module.exports = function (config) {
   config.set({
-
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
@@ -13,6 +12,12 @@ module.exports = function (config) {
     // list of files / patterns to load in the browser
     files: [
       'specs/**/*Spec.js',
+      {
+        pattern: 'src/public/images/heros/*.svg',
+        watched: false,
+        included: false,
+        served: true,
+      },
     ],
 
     // list of files / patterns to exclude
@@ -24,13 +29,29 @@ module.exports = function (config) {
       'specs/**/*Spec.js': ['webpack', 'sourcemap'],
     },
 
+    // webpack: {
+    // karma watches the test entry points
+    // (you don't need to specify the entry option)
+    // webpack watches dependencies
+    // webpack configuration
+    //   devtool: 'inline-source-map',
+    //   mode: 'development',
+    // },
+
     webpack: {
-      // karma watches the test entry points
-      // (you don't need to specify the entry option)
-      // webpack watches dependencies
-      // webpack configuration
       devtool: 'inline-source-map',
-      mode: 'development',
+      module: {
+        rules: [
+          {
+            test: /\.(png|jpg|jpeg|ttf|eot|svg|gif)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+            use: [
+              {
+                loader: 'file-loader',
+              },
+            ],
+          },
+        ],
+      },
     },
 
     webpackMiddleware: {
