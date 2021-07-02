@@ -58,6 +58,13 @@ if (workbox) {
   ]);
 
   workbox.routing.registerRoute(
+    /^https:\/\/restaurant\-api\.dicoding\.dev/,
+    workbox.strategies.networkFirst({
+      cacheName: 'api-restaurant',
+    })
+  );
+
+  workbox.routing.registerRoute(
     /^https:\/\/fonts\.googleapis\.com/,
     workbox.strategies.staleWhileRevalidate({
       cacheName: 'google-fonts-stylesheets',
