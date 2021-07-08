@@ -21,11 +21,14 @@ Scenario('liking and Unliking one restaurant', async ({ I }) => {
   );
 
   I.amOnPage('/');
+  I.wait(5);
 
   I.seeElement('.item__title a');
 
   const firstRestaurant = locate('.item__title a').first();
   const firstRestaurantTitle = await I.grabTextFrom(firstRestaurant);
+
+  I.waitForElement(firstRestaurant, 10);
 
   I.click(firstRestaurant);
   I.seeElement('#likeButton');
@@ -36,6 +39,8 @@ Scenario('liking and Unliking one restaurant', async ({ I }) => {
 
   const likedRestaurantTitle = await I.grabTextFrom('.liked__content h2');
   assert.strictEqual(firstRestaurantTitle, likedRestaurantTitle);
+
+  I.wait(5);
 
   I.seeElement('.see__detail');
   I.click('.see__detail a');

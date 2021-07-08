@@ -9,27 +9,31 @@ Before(({ I }) => {
 Scenario('Giving a restaurant review', async ({ I }) => {
   I.seeElement('.home__items');
 
-  const firstRestaurant = locate('.item__title a').first();
-  I.click(firstRestaurant);
+  I.seeElement('.resto');
+
+  await I.click(locate('.resto').first());
 
   I.seeElement('.personal__review');
   I.see('What do you think about this restaurant ?', '.personal__review h3');
 
-  const Name = 'Yudhz';
-  const Review = 'revew 4';
+  const Name = 'husnul';
+  const Review = 'revew 6';
 
   I.fillField('#name', Name);
   I.fillField('#review', Review);
 
   I.click('#review__submit');
 
+  I.wait(5);
+
   const lastReviewName = locate('.reviewer__name').last();
   const lastReview = locate('.reviewer__review').last();
 
   I.amOnPage('/');
 
-  I.waitForElement(locate('.item__title a').first(), 10);
-  I.click(locate('.item__title a').first());
+  I.wait(5);
+
+  await I.click(locate('.resto').first());
 
   I.seeElement('#review__card');
 

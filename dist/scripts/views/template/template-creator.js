@@ -12,13 +12,13 @@ const restaurantItemTemplate = (restaurant) => `
         <div class="tag">
             ${restaurant.city}
         </div>
-        <img  class="lazyload" src="${
+        <img  class="lazyload" data-src="${
           CONFIG.BASE_IMAGE_URL + 'medium/' + restaurant.pictureId
         }" alt="gambar restaurant ${restaurant.name}">
     </figure>
     <div class="content__wrapper" tabindex="0">
         <p class="item__rating">Rating: ${restaurant.rating}</p>
-        <h3 class="item__title"><a href="${`/#/detail/${restaurant.id}`}">${
+        <h3 class="item__title"><a id="resto" class="resto" href="${`/#/detail/${restaurant.id}`}">${
   restaurant.name
 }</a></h3>
         <p class="item__desc">${restaurant.description}</p>

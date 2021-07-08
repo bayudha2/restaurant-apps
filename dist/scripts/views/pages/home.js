@@ -3,7 +3,6 @@ import {
   restaurantItemTemplate,
   skeletonRestaurantTemplate,
 } from '../template/template-creator';
-import PulseLoading from '../../../images/pulse_loading.svg';
 import NoDataIllu from '../../../images/no-data.svg';
 
 const Home = {

@@ -163,7 +163,7 @@ body {
 @media screen and (max-width: 720px) {
   .hero {
     background: url('/images/hero/hero-image_4-small.jpg') no-repeat center;
-    min-height: 450px;
+    min-height: 480px;
   }
 }
 
@@ -304,6 +304,11 @@ footer {
           -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
         }
+      }
+    }
+    .hero__content {
+      .hero__title {
+        font-size: 24px;
       }
     }
   }

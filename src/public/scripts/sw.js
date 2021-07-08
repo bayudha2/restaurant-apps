@@ -51,6 +51,18 @@ if (workbox) {
       url: '/defaultVendors~main~._node_modules_a.container.bundle.js',
       revision: '1',
     },
+    {
+      url: '/defaultVendors~main~._node_modules_l.container.bundle.js',
+      revision: '1',
+    },
+    {
+      url: '/defaultVendors~main~._node_modules_u.container.bundle.js',
+      revision: '1',
+    },
+    {
+      url: '/defaultVendors~main~._node_modules_sockjs-client_dist_sockjs.js~9be258d6.container.bundle.js',
+      revision: '1',
+    },
     { url: '/container.bundle.js', revision: '1' },
     { url: '/0.container.bundle.js', revision: '1' },
     { url: '/1.container.bundle.js', revision: '1' },
@@ -58,7 +70,7 @@ if (workbox) {
   ]);
 
   workbox.routing.registerRoute(
-    /^https:\/\/restaurant\-api\.dicoding\.dev/,
+    /^https:\/\/restaurant-api\.dicoding\.dev/,
     workbox.strategies.networkFirst({
       cacheName: 'api-restaurant',
     })
