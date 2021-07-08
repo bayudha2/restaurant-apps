@@ -6,6 +6,9 @@ if (workbox) {
 
   workbox.precaching.precacheAndRoute([
     { url: '/', revision: '1' },
+    { url: '/images/hero/hero-image_4-small.jpg', revision: '1' },
+    { url: '/images/hero/hero-image_4-large.jpg', revision: '1' },
+    { url: '/images/icons/maskable_icon_x48.png', revision: '1' },
     { url: '/images/icons/maskable_icon_x48.png', revision: '1' },
     { url: '/images/icons/maskable_icon_x72.png', revision: '1' },
     { url: '/images/icons/maskable_icon_x96.png', revision: '1' },
